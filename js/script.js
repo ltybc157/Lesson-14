@@ -1,18 +1,12 @@
-window.addEventListener('load', function () {
-    'use strict';
-    let btn = document.querySelector('.main_btna');
-    let modal = document.querySelector('.modal');
-    let close = document.querySelector('.close');
+$(document).ready(function() {
 
-    btn.addEventListener('click', function () {
-
-        modal.style.display = 'block';
-        
-
+    $('.main_btna, .main_btn, a[href="#sheldure"]').on('click', function() {
+        $('.overlay').fadeIn(1000);
+        $('.modal').slideDown(1000);
     });
-    close.addEventListener('click', function () {
-        modal.style.display = 'none';
-     
+    
+    $('.close').on('click', function() {
+        $('.modal').slideUp(1000);
+        $('.overlay').fadeOut(1000);
     });
-
 });
